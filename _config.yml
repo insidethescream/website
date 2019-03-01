@@ -1,0 +1,23 @@
+exclude: [Gemfile, Gemfile.lock, .babelrc, gulpfile.babel.js, package.json, package-lock.json, postcss.config.js, yarn.lock, node_modules]
+
+# Dependencies
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  auto_ids: true
+
+# Permalinks
+permalink: pretty
+
+# Gems
+gems:
+
+# Site
+title: Domaine du Clos des Liesses
+description: description
+authors: Tiffany Vachez
+
+headers:
+  Cache-Control: max-age=86400
+

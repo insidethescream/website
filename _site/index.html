@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+  <title>Home</title>
+  <meta name="description" content="Description">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="cache-control" content="max-age=86400" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+</head>
+
+
+  <body>
+
+    <nav></nav>
+
+
+    <div id="homepage">
+
+      <style>
+  #loader {
+    align-items: center;
+    background-color: black;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: opacity 1.5s;
+    width: 100%;
+    z-index: 9999;
+  }
+  #loader img {
+    height: 40%;
+    width: auto;
+  }
+  @media screen and (max-width: 768px) {
+    #loader img {
+      width: 70%;
+    }
+  }
+</style>
+
+<div id="loader">
+  <img class="logo" src="/assets/images/logo-white.png" alt="logo-clos-des-liesses">
+</div>
+
+<script>
+  window.onload = function() {
+    document.getElementById('loader').style.opacity = '0';
+    setTimeout(function() {
+      document.getElementById('loader').style.display = 'none';
+    }, 1500);
+  };
+</script>
+
+
+      <nav>
+        <ul>
+          <li class="nav__home"><a class="js-scrollTo" href="#home">Accueil</a></li>
+          <li class="nav__scream"><a class="js-scrollTo" href="#scream">Scream</a></li>
+          <li class="nav__contact"><a class="js-scrollTo" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <section id="home">
+        <img class="logo" src="/assets/images/logo-white.png" alt="logo-its">
+        <a class="js-scrollTo" href="#scream"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+      </section>
+
+      <section id="scream">
+        <div class="scream__block" id="block-class" data-aos="fade">
+          <p class="scream__block-title">cours</p>
+        </div>
+        <div class="scream__block" id="block-stage" data-aos="fade">
+          <p class="scream__block-title">stage</p>
+        </div>
+        <div class="scream__block" id="block-masterclass" data-aos="fade">
+          <p class="scream__block-title">masterclass</p>
+        </div>
+        <div class="scream__block" id="block-about" data-aos="fade">
+          <p class="scream__block-title">à propos</p>
+        </div>
+        <div class="scream__block" id="block-videos" data-aos="fade">
+          <p class="scream__block-title">vidéos</p>
+        </div>
+        <div class="scream__block" id="block-press" data-aos="fade">
+          <p class="scream__block-title">presse</p>
+        </div>
+        <a class="js-scrollTo" href="#contact"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+      </section>
+
+      <section id="contact">
+        <h2 class="contact__title">Contact</h2>
+        <form id="contact__form" action="https://formspree.io/tiffany.vachez@outlook.com" method="POST">
+          <input class="contact__input" type="text" name="name" placeholder="Nom">
+          <input class="contact__input" type="email" name="email" placeholder="Email">
+          <textarea class="contact__textarea" type="text" name="message" placeholder="Message"></textarea>
+          <button class="contact__submit" type="submit" value="Send">envoyer</button>
+        </form>
+      </section>
+
+    </div>
+
+    <!-- <div id="signature">Copyright © 2019&nbsp;<a href="https://tiffany-vachez.com/">&nbsp;Tiffany Vachez</a></div> -->
+
+    <footer></footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos/dist/aos.js"></script>
+<script src="/assets/js/utils.js?v=0.1"></script>
+<script src="https://use.fontawesome.com/7729d5c7ef.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/assets/stylesheets/application.css?v=0.1"/>
+<link href="https://unpkg.com/aos/dist/aos.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="" crossorigin="anonymous">
+
+
+    <script src="/assets/js/homepage.js?v=0.1"></script>
+
+  </body>
+
+</html>

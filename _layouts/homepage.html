@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  {% include head.html %}
+
+  <body>
+
+    {% include nav.html %}
+
+    <div id="homepage">
+
+      {% include loader.html %}
+
+      <nav>
+        <ul>
+          <li class="nav__home"><a class="js-scrollTo" href="#home">Accueil</a></li>
+          <li class="nav__scream"><a class="js-scrollTo" href="#scream">Scream</a></li>
+          <li class="nav__contact"><a class="js-scrollTo" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <section id="home">
+        <img class="logo" src="{{ site.baseurl }}/assets/images/logo-white.png" alt="logo-its">
+        <a class="js-scrollTo" href="#scream"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+      </section>
+
+      <section id="scream">
+        <div class="scream__block" id="block-class" data-aos="fade">
+          <p class="scream__block-title">cours</p>
+        </div>
+        <div class="scream__block" id="block-stage" data-aos="fade">
+          <p class="scream__block-title">stage</p>
+        </div>
+        <div class="scream__block" id="block-masterclass" data-aos="fade">
+          <p class="scream__block-title">masterclass</p>
+        </div>
+        <div class="scream__block" id="block-about" data-aos="fade">
+          <p class="scream__block-title">à propos</p>
+        </div>
+        <div class="scream__block" id="block-videos" data-aos="fade">
+          <p class="scream__block-title">vidéos</p>
+        </div>
+        <div class="scream__block" id="block-press" data-aos="fade">
+          <p class="scream__block-title">presse</p>
+        </div>
+        <a class="js-scrollTo" href="#contact"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+      </section>
+
+      <section id="contact">
+        <h2 class="contact__title">Contact</h2>
+        <form id="contact__form" action="https://formspree.io/tiffany.vachez@outlook.com" method="POST">
+          <input class="contact__input" type="text" name="name" placeholder="Nom">
+          <input class="contact__input" type="email" name="email" placeholder="Email">
+          <textarea class="contact__textarea" type="text" name="message" placeholder="Message"></textarea>
+          <button class="contact__submit" type="submit" value="Send">envoyer</button>
+        </form>
+      </section>
+
+    </div>
+
+    <!-- <div id="signature">Copyright © 2019&nbsp;<a href="https://tiffany-vachez.com/">&nbsp;Tiffany Vachez</a></div> -->
+
+    {% include footer.html %}
+
+    {% include script.html %}
+
+    <script src="{{ site.baseurl }}/assets/js/homepage.js?v=0.1"></script>
+
+  </body>
+
+</html>
