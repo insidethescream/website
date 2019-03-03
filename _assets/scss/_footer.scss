@@ -1,0 +1,35 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  background: #404040;
+  width: 100%;
+  color: white;
+  padding: 0 15px;
+  font-size: 13px;
+}
+
+#footer__nav {
+  color: white;
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    color: white;
+  }
+}
+
+#signature {
+  a {
+    color: orange;
+
+    &:hover {
+      color: white;
+    }
+  }
+}

@@ -13,14 +13,17 @@ $(document).ready(function(){
   });
 
   var top1 = $('#home').offset().top;
-  var top2 = $('#scream').offset().top;
-  var top3 = $('#contact').offset().top;
+  var top2 = $('#about').offset().top;
+  var top3 = $('#scream').offset().top;
+  var top4 = $('#contact').offset().top;
   var scrollPos = $(document).scrollTop();
 
-  $('.nav__home a, .nav__scream a, .nav__contact a').removeClass('current');
+  $('.nav__home a, .nav__about a, .nav__scream a, .nav__contact a').removeClass('current');
   if (scrollPos >= top1 && scrollPos < top2) {
     $('.nav__home a').addClass('current');
   } else if (scrollPos >= top2 && scrollPos < top3) {
+    $('.nav__about a').addClass('current');
+  } else if (scrollPos >= top3 && scrollPos < top4) {
     $('.nav__scream a').addClass('current');
   } else if (scrollPos >= top3) {
     $('.nav__contact a').addClass('current');
@@ -34,17 +37,19 @@ $(document).ready(function(){
         $windowHeight = $(window).height();
 
     if($scrollTop > 0) {
-        $("nav").addClass("fixed");
+        $("#main-nav").addClass("fixed");
     }
     else {
-        $("nav").removeClass("fixed");
+        $("#main-nav").removeClass("fixed");
     }
 
     var scrollPos = $(document).scrollTop();
-    $('.nav__home a, .nav__scream a, .nav__contact a').removeClass('current');
+    $('.nav__home a, .nav__about a, .nav__scream a, .nav__contact a').removeClass('current');
     if (scrollPos >= top1 && scrollPos < top2) {
       $('.nav__home a').addClass('current');
     } else if (scrollPos >= top2 && scrollPos < top3) {
+      $('.nav__about a').addClass('current');
+    } else if (scrollPos >= top3 && scrollPos < top4) {
       $('.nav__scream a').addClass('current');
     } else if (scrollPos >= top3) {
       $('.nav__contact a').addClass('current');
