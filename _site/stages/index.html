@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+  <title>Stages</title>
+  <meta name="description" content="Description">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="cache-control" content="max-age=86400" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+</head>
+
+
+  <body>
+
+    <nav></nav>
+
+
+    <div id="stages">
+
+      <style>
+  #loader {
+    align-items: center;
+    background-color: black;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: opacity 1.5s;
+    width: 100%;
+    z-index: 9999;
+  }
+  #loader img {
+    height: 40%;
+    width: auto;
+  }
+  @media screen and (max-width: 768px) {
+    #loader img {
+      width: 70%;
+    }
+  }
+</style>
+
+<div id="loader">
+  <img class="logo" src="/assets/images/logo-white.png" alt="logo-clos-des-liesses">
+</div>
+
+<script>
+  window.onload = function() {
+    document.getElementById('loader').style.opacity = '0';
+    setTimeout(function() {
+      document.getElementById('loader').style.display = 'none';
+    }, 1500);
+  };
+</script>
+
+
+      <a class="stage__back" href="">
+        <i class="fa fa-angle-left"></i>
+        <img class="stage__logo" src="/assets/images/logo-white.png" alt="logo-its">
+      </a>
+
+      <section id="stages__intro">
+        <img class="centered-crop-image" src="/assets/images/stages.jpg" alt="">
+        <h1 class="stage__title">Stages</h1>
+      </section>
+
+      <footer>
+  <p>David Féron - Paris 9e, métro Pigalle</p>
+  <nav id="footer__nav">
+    <ul>
+      <li class="nav__FAQ"><a href="/FAQ">F.A.Q</a></li>
+    </ul>
+  </nav>
+  <p id="signature">Copyright © 2019&nbsp;<a href="https://tiffany-vachez.com/" target="_blank" rel="noopener">&nbsp;Tiffany Vachez</a></p>
+</footer>
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos/dist/aos.js"></script>
+<script src="/assets/js/utils.js?v=0.1"></script>
+<script src="https://use.fontawesome.com/7729d5c7ef.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/assets/stylesheets/application.css?v=0.1"/>
+<link href="https://unpkg.com/aos/dist/aos.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="" crossorigin="anonymous">
+
+
+    <!-- <script src="/assets/js/homepage.js?v=0.1"></script> -->
+
+  </body>
+
+</html>

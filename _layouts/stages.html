@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  {% include head.html %}
+
+  <body>
+
+    {% include nav.html %}
+
+    <div id="stages">
+
+      {% include loader.html %}
+
+      <a class="stage__back" href="">
+        <i class="fa fa-angle-left"></i>
+        <img class="stage__logo" src="{{ site.baseurl }}/assets/images/logo-white.png" alt="logo-its">
+      </a>
+
+      <section id="stages__intro">
+        <img class="centered-crop-image" src="{{ site.baseurl }}/assets/images/stages.jpg" alt="">
+        <h1 class="stage__title">Stages</h1>
+      </section>
+
+      {% include footer.html %}
+
+    </div>
+
+
+    {% include script.html %}
+
+    <!-- <script src="{{ site.baseurl }}/assets/js/homepage.js?v=0.1"></script> -->
+
+  </body>
+
+</html>

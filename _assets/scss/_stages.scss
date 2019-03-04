@@ -1,0 +1,44 @@
+#stages {
+
+}
+
+#stages__intro {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: center;
+  margin:0;
+  padding:0;
+  position: relative;
+  overflow: hidden;
+
+  .centered-crop-image {
+    padding-top: 20%;
+  }
+}
+
+.stage__back {
+  height: 70px;
+  position: absolute;
+  z-index: 1;
+  margin: 10px;
+  display: flex;
+
+  .fa-angle-left {
+    color: white;
+    font-size: 40px;
+    line-height: 60px;
+    margin-right: 10px;
+  }
+}
+
+.stage__logo {
+  height: 100%;
+}
+
+.stage__title {
+  font-size: 30px;
+  color: white;
+  z-index: 1;
+}
