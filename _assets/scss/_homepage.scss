@@ -193,6 +193,7 @@ i.fa.fa-angle-down {
 
 .about__text {
   margin-bottom: 10px;
+  line-height: 25px;
 }
 
 #scream {
@@ -213,6 +214,7 @@ i.fa.fa-angle-down {
   height: calc(33.33% - 15px);
   overflow: hidden;
   position: relative;
+  font-family: "PT Sans";
 
   &:nth-child(5),
   &:nth-child(6) {
