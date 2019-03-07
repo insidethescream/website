@@ -26,6 +26,9 @@ var app = new Vue({
     getStages: function() {
       var self = this;
       var baseUrl = window.location.origin;
+      if(baseUrl === "https://insidethescream.github.io") {
+        baseUrl += "/website"
+      }
       $.getJSON(baseUrl + '/assets/json/stages.json', function (stages) {
         self.stages = stages;
       })
