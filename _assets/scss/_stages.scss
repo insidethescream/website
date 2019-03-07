@@ -58,7 +58,7 @@
 
 .stages__description-block {
   width: 800px;
-  margin: 70px auto 50px auto;
+  margin: 70px auto;
   position: relative;
 
   &::before {
@@ -95,10 +95,46 @@
 #stages__events {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   padding: 0 10% 100px 10%;
   font-family: "open sans";
   letter-spacing: 0.5px;
+  flex-direction: column;
+}
+
+.stages__events-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.stages__events-button {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0 5px;
+  padding: 10px 20px;
+  border-radius: 0;
+  background: none;
+  color: #20626d;
+  cursor: pointer;
+  line-height: 14px;
+  border: 1px solid #20626d;
+
+  &.active {
+    background: #20626d;
+    color: white;
+  }
+
+  &:active, &:focus {
+    box-shadow: none;
+    outline: none;
+    border: 1px solid #20626d;
+  }
+}
+
+.stages__events-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .stages__events-block {
@@ -119,6 +155,24 @@
   }
 }
 
+.stages__events-block.lvl-1 {
+  .stages__events-tag {
+    background: #4ea1af;
+  }
+  .stages__events-title span {
+    color: #4ea1af;
+  }
+}
+.stages__events-block.lvl-2 {
+  .stages__events-tag {
+    background: #e78353;
+  }
+  .stages__events-title span {
+    color: #e78353;
+  }
+}
+
+
 .stages__events-tag {
   position: absolute;
   top: -40px;
@@ -126,11 +180,6 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: #4ea1af;
-
-  &.lvl-2 {
-    background: #e78353;
-  }
 
   p {
     position: absolute;
@@ -149,12 +198,6 @@
 
   span {
     font-weight: 100;
-  }
-  span.lvl-1 {
-    color: #4ea1af;
-  }
-  span.lvl-2 {
-    color: #e78353;
   }
 }
 

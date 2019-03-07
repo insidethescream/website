@@ -86,14 +86,24 @@
       </section>
 
       <section id="stages__events">
-        <div class="stages__events-block" v-for="stage in stages">
-          <div class="stages__events-tag lvl-1">
-            <p>[[ stage.level ]]</p>
+        <div class="stages__events-buttons">
+          <button class="stages__events-button" v-on:click="filterKey = 'all'" :class="{ active: filterKey === 'all' }">All</button>
+          <button class="stages__events-button" v-on:click="filterKey = 'level1'" :class="{ active: filterKey === 'level1' }">Level 1</button>
+          <button class="stages__events-button" v-on:click="filterKey = 'level2'" :class="{ active: filterKey === 'level2' }">Level 2</button>
+        </div>
+        <div class="stages__events-list">
+          <div class="stages__events-block"
+              v-for="stage in filteredStages"
+              :class="{'lvl-1': stage.level === '1', 'lvl-2': stage.level === '2'}"
+          >
+            <div class="stages__events-tag">
+              <p>[[ stage.level ]]</p>
+            </div>
+            <p class="stages__events-title">[[ stage.title ]] <span class="lvl-1"><br>[niveau [[ stage.level ]]]</span></p>
+            <p class="stages__events-text"><span class="underline">Dates:</span> [[ stage.date ]]</p>
+            <p class="stages__events-text"><span class="underline">Lieu:</span> [[ stage.place ]]</p>
+            <p class="stages__events-text"><span class="underline">Tarif:</span> [[ stage.price ]]</p>
           </div>
-          <p class="stages__events-title">[[ stage.title ]] <span class="lvl-1"><br>[niveau [[ stage.level ]]]</span></p>
-          <p class="stages__events-text"><span class="underline">Dates:</span> [[ stage.date ]]</p>
-          <p class="stages__events-text"><span class="underline">Lieu:</span> [[ stage.place ]]</p>
-          <p class="stages__events-text"><span class="underline">Tarif:</span> [[ stage.price ]]</p>
         </div>
       </section>
 
@@ -113,6 +123,7 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
 <script src="/assets/js/utils.js?v=0.1"></script>
 <script src="https://use.fontawesome.com/7729d5c7ef.js"></script>
 
