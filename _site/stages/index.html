@@ -17,9 +17,7 @@
     <nav></nav>
 
 
-    <div id="stages">
-
-      <style>
+    <style>
   #loader {
     align-items: center;
     background-color: black;
@@ -59,6 +57,8 @@
 </script>
 
 
+    <div id="stages">
+
       <a class="stage__back" href="/">
         <i class="fa fa-angle-left"></i>
         <img class="stage__logo" src="/assets/images/logo-white.png" alt="logo-its">
@@ -86,59 +86,14 @@
       </section>
 
       <section id="stages__events">
-        <div class="stages__events-block">
+        <div class="stages__events-block" v-for="stage in stages">
           <div class="stages__events-tag lvl-1">
-            <p>1</p>
+            <p>[[ stage.level ]]</p>
           </div>
-          <p class="stages__events-title">Voix saturées <span class="lvl-1"><br>[niveau 1]</span></p>
-          <p class="stages__events-text"><span class="underline">Dates:</span> 03 et 04 mars 2019</p>
-          <p class="stages__events-text"><span class="underline">Lieu:</span> Studio des variétés, Paris 11e</p>
-          <p class="stages__events-text"><span class="underline">Tarif:</span> 180€</p>
-        </div>
-        <div class="stages__events-block">
-          <div class="stages__events-tag lvl-1">
-            <p>1</p>
-          </div>
-          <p class="stages__events-title">Voix saturées <span class="lvl-1"><br>[niveau 1]</span></p>
-          <p class="stages__events-text"><span class="underline">Dates:</span> 12 et 13 avril 2019</p>
-          <p class="stages__events-text"><span class="underline">Lieu:</span> Studio des variétés, Paris 11e</p>
-          <p class="stages__events-text"><span class="underline">Tarif:</span> 180€</p>
-        </div>
-        <div class="stages__events-block">
-          <div class="stages__events-tag lvl-2">
-            <p>2</p>
-          </div>
-          <p class="stages__events-title">Voix saturées <span class="lvl-2"><br>[niveau 2]</span></p>
-          <p class="stages__events-text"><span class="underline">Dates:</span> 20 et 21 mai 2019</p>
-          <p class="stages__events-text"><span class="underline">Lieu:</span> Studio des variétés, Paris 11e</p>
-          <p class="stages__events-text"><span class="underline">Tarif:</span> 180€</p>
-        </div>
-        <div class="stages__events-block">
-          <div class="stages__events-tag lvl-2">
-            <p>2</p>
-          </div>
-          <p class="stages__events-title">Voix saturées <span class="lvl-2"><br>[niveau 2]</span></p>
-          <p class="stages__events-text"><span class="underline">Dates:</span> 06 et 07 juin 2019</p>
-          <p class="stages__events-text"><span class="underline">Lieu:</span> Studio des variétés, Paris 11e</p>
-          <p class="stages__events-text"><span class="underline">Tarif:</span> 180€</p>
-        </div>
-        <div class="stages__events-block">
-          <div class="stages__events-tag lvl-1">
-            <p>1</p>
-          </div>
-          <p class="stages__events-title">Voix saturées <span class="lvl-1"><br>[niveau 1]</span></p>
-          <p class="stages__events-text"><span class="underline">Dates:</span> 10 et 11 juillet 2019</p>
-          <p class="stages__events-text"><span class="underline">Lieu:</span> Studio des variétés, Paris 11e</p>
-          <p class="stages__events-text"><span class="underline">Tarif:</span> 180€</p>
-        </div>
-        <div class="stages__events-block">
-          <div class="stages__events-tag lvl-2">
-            <p>2</p>
-          </div>
-          <p class="stages__events-title">Voix saturées <span class="lvl-2"><br>[niveau 2]</span></p>
-          <p class="stages__events-text"><span class="underline">Dates:</span> 9 et 10 août 2019</p>
-          <p class="stages__events-text"><span class="underline">Lieu:</span> Studio des variétés, Paris 11e</p>
-          <p class="stages__events-text"><span class="underline">Tarif:</span> 180€</p>
+          <p class="stages__events-title">[[ stage.title ]] <span class="lvl-1"><br>[niveau [[ stage.level ]]]</span></p>
+          <p class="stages__events-text"><span class="underline">Dates:</span> [[ stage.date ]]</p>
+          <p class="stages__events-text"><span class="underline">Lieu:</span> [[ stage.place ]]</p>
+          <p class="stages__events-text"><span class="underline">Tarif:</span> [[ stage.price ]]</p>
         </div>
       </section>
 
@@ -170,7 +125,8 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="" crossorigin="anonymous">
 
 
-    <!-- <script src="/assets/js/homepage.js?v=0.1"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/assets/js/stages.js?v=0.1"></script>
 
   </body>
 

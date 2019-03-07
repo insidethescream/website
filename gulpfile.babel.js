@@ -27,6 +27,7 @@ const globs = {
     ...includePaths.js,
     './_assets/js/**/*.js'
   ],
+  json: './_assets/json/**/*.json',
   stylesheets: './_assets/scss/**/*.scss',
   images: './_assets/images/**/*.{png,gif,jpg,jpeg,svg,mp4,ico}',
   fonts: './_assets/fonts/**/*.{eot,ttf,woff,otf}',
@@ -36,6 +37,7 @@ const globs = {
 const paths = {
   build: './assets',
   js: './assets/js',
+  json: './assets/json',
   stylesheets: './assets/stylesheets',
   images: './assets/images',
   fonts: './assets/fonts',
@@ -43,7 +45,7 @@ const paths = {
 }
 
 // Default
-gulp.task('default', ['js', 'sass', 'images', 'fonts', 'svg'], () => {
+gulp.task('default', ['js', 'json', 'sass', 'images', 'fonts', 'svg'], () => {
   browserSync.init({
     server: {
       baseDir: './_site'
@@ -51,6 +53,7 @@ gulp.task('default', ['js', 'sass', 'images', 'fonts', 'svg'], () => {
   });
   gulp.watch(globs.html, ['bs-reload']);
   gulp.watch(globs.js, ['js']);
+  gulp.watch(globs.json, ['json']);
   gulp.watch(globs.stylesheets, ['sass']);
   gulp.watch(globs.images, ['images']);
   gulp.watch(globs.fonts, ['fonts']);
@@ -67,8 +70,14 @@ gulp.task('js', () => {
   return gulp.src(globs.js)
     // .pipe(concat('application.js'))
     // .pipe(rename('application.min.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest(paths.js));
+});
+
+// Jsons
+gulp.task('json', () => {
+  return gulp.src(globs.json)
+    .pipe(gulp.dest(paths.json));
 });
 
 // SASS
